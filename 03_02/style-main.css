@@ -95,7 +95,12 @@ code,
 kbd,
 tt,
 var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: 
+	15px Monaco,
+	 Consolas,
+	"Andale Mono",
+	"DejaVu Sans Mono",
+	monospace;
 }
 
 abbr,
@@ -124,7 +129,7 @@ sup {
 }
 
 sub {
-	top: .5ex;
+	top: 0.5ex;
 }
 
 small {
@@ -301,3 +306,27 @@ Basic responsive layout for all browsers:
 /*--------------------------------------------------------------
 CSS Grid layout for modern browsers:
 --------------------------------------------------------------*/
+@supports (grid-area: auto) {
+ @media screen and (min-width: 50em) {
+   .site {
+     max-width: none;
+     display: grid;
+     grid-template-columns: 15em auto;
+   }
+   .masthead {
+     grid-column: 1/2;
+   }
+   .feature {
+     grid-column: 2/3;
+   }
+   .main-area {
+     grid-column: 2/3;
+   }
+   .sidebar {
+     grid-column: 2/3;
+   }
+   .colophon {
+     grid-column: 1/3;
+   }
+ }
+}
