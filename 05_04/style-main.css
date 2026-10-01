@@ -96,7 +96,11 @@ code,
 kbd,
 tt,
 var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: 15px Monaco,
+	 Consolas,
+	"Andale Mono",
+	"DejaVu Sans Mono",
+	monospace;
 }
 
 abbr,
@@ -203,7 +207,7 @@ Cards:
 	text-decoration: none;
 	background: white;
 	border: 1px transparent;
-	transition: all .2s;
+	transition: all 0.2s;
 }
 
 .card a:focus,
@@ -229,7 +233,7 @@ Cards:
 
 .cards h2 {
 	margin: 0;
-	padding-top: .5em;
+	padding-top: 0.5em;
 }
 
 .meta {
@@ -241,3 +245,10 @@ Cards:
 Card grid:
 --------------------------------------------------------------*/
 
+@supports (grid-area: auto) {
+	.crad a {
+		display: grid;
+		grid-template-columns: 6em auto;
+		grid-template-rows: 1fr 1fr;
+	}
+}
